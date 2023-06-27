@@ -149,4 +149,5 @@ dmypy.json
 media/
 
 # Others
-node_modules
+node_modules/
+static_backend/
