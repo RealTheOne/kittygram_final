@@ -21,14 +21,12 @@ services:
 
   frontend:
     image: realtheone/kittygram_frontend
-    env_file: .env
     command: cp -r /app/build/. /static/
     volumes:
       - static:/static
 
   gateway:
     image: realtheone/kittygram_gateway
-    env_file: .env
     ports:
       - 9000:80
     volumes:
