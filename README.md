@@ -1,26 +1,44 @@
-#  Как работать с репозиторием финального задания
 
-## Что нужно сделать
+# Educational project: CI / CD Kittygram project on a remote server
+## Description:
+Project kittygram_final is an educational project to get familiar with CI / CD of an app on a remote server.
+It is a part of Python-developer course from Yandex-practicum.
+This project allows you to post cards of cats with their photos, date of birth, color and some other info.
 
-Настроить запуск проекта Kittygram в контейнерах и CI/CD с помощью GitHub Actions
+## Running project can be seen at:
+https://yapkittygramtask.dynv6.net
 
-## Как проверить работу с помощью автотестов
 
-В корне репозитория создайте файл tests.yml со следующим содержимым:
-```yaml
-repo_owner: ваш_логин_на_гитхабе
-kittygram_domain: полная ссылка (https://доменное_имя) на ваш проект Kittygram
-taski_domain: полная ссылка (https://доменное_имя) на ваш проект Taski
-dockerhub_username: ваш_логин_на_докерхабе
+## how to deploy
+### Clone repository and access it through command line:
+```
+git clone git@github.com:RealTheOne/kittygram_final.git
+cd kittygram_final
+```
+### Create and activate virtual environment:
+```
+cd backend
+python3 -m venv venv
+source venv/bin/activate
+```
+### Install requirements from requirements.txt:
+```
+python install -r requirements.txt
+```
+### Do migrations:
+```
+python manage.py migrate
 ```
 
-Скопируйте содержимое файла `.github/workflows/main.yml` в файл `kittygram_workflow.yml` в корневой директории проекта.
+## stack
+1. Python
+2. Django
+3. DRF
+4. JWT + Djoser
+5. NGinx
+6. Gunicorn
+7. React
+8. Docker
 
-Для локального запуска тестов создайте виртуальное окружение, установите в него зависимости из backend/requirements.txt и запустите в корневой директории проекта `pytest`.
-
-## Чек-лист для проверки перед отправкой задания
-
-- Проект Taski доступен по доменному имени, указанному в `tests.yml`.
-- Проект Kittygram доступен по доменному имени, указанному в `tests.yml`.
-- Пуш в ветку main запускает тестирование и деплой Kittygram, а после успешного деплоя вам приходит сообщение в телеграм.
-- В корне проекта есть файл `kittygram_workflow.yml`.
+## Author:
+ Idrisov Arthur
