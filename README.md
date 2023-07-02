@@ -9,25 +9,27 @@ This project allows you to post cards of cats with their photos, date of birth, 
 https://yapkittygramtask.dynv6.net
 
 
-## how to deploy
+## how to run project in dev-mode
 ### Clone repository and access it through command line:
 ```
 git clone git@github.com:RealTheOne/kittygram_final.git
 cd kittygram_final
 ```
-### Create and activate virtual environment:
+### In command line run a command (You should have Docker and Docker Compose installed):
 ```
-cd backend
-python3 -m venv venv
-source venv/bin/activate
+docker compose up
 ```
-### Install requirements from requirements.txt:
+### collect Django static by a command:
 ```
-python install -r requirements.txt
+docker compose exec backend python manage.py collectstatic
 ```
-### Do migrations:
+### Copy static:
 ```
-python manage.py migrate
+docker compose exec backend cp -r /app/collected_static/. /static/static/
+```
+### In your browser open:
+```
+http://127.0.0.1:9000/
 ```
 
 ## stack
