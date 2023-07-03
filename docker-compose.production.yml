@@ -30,7 +30,7 @@ services:
   gateway:
     image: realtheone/kittygram_gateway
     ports:
-      - ${NGINX_PORT}:80
+      - $NGINX_PORT:80
     volumes:
       - static:/static
       - media:/app/media
