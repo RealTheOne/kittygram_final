@@ -1,13 +1,8 @@
 
-# Educational project: CI / CD Kittygram project on a remote server
+# Project: CI / CD Kittygram project on a remote server (CI / CD Kittygram на удаленном сервере)
 ## Description:
-Project kittygram_final is an educational project to get familiar with CI / CD of an app on a remote server.
-It is a part of Python-developer course from Yandex-practicum.
+Project kittygram_final is a project to implement CI / CD of an app on a remote server.
 This project allows you to post cards of cats with their photos, date of birth, color and some other info.
-
-## Running project can be seen at:
-https://yapkittygramtask.dynv6.net
-
 
 ## how to run project in dev-mode
 ### Clone repository and access it through command line:
